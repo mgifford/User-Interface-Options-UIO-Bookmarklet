@@ -52,17 +52,20 @@ The following features are planned for future implementation:
    - Word Spacing control
    - Text-to-Speech functionality
    - Syllabification for complex words
+   - Font family control (Times, Ariel, Verdana, Comic Sans / OpenDyslexic)
+   - Text to speech options
+   - Reader mode
 
 2. Visual Improvements:
-   - Additional color schemes beyond high contrast
+   - Additional color schemes beyond high contrast (Fluid white on black, black on white, yellow on black, black on yellow, greyscale)
    - Custom highlight colors for selected text
    - Enhanced form input visibility
    - Custom link styles
 
 3. Navigation Enhancements:
-   - Skip links for better keyboard navigation
-   - Right-click text selection option
-   - Enhanced keyboard shortcuts
+   - Skip links placement for better keyboard navigation
+   - Right-click text selection option (for something)?
+   - Enhanced keyboard shortcuts (Search, footer, etc.)
    - Better heading navigation
 
 4. Technical Improvements:
@@ -76,3 +79,10 @@ The following features are planned for future implementation:
    - Better screen reader support
    - Focus management improvements
    - Enhanced keyboard navigation patterns
+  
+6. Memory
+   - Local storage or cache for page viewing
+   - Ability to store site specific preferences in cookies
+  
+7. Testing
+   - Better manual and automated testing
