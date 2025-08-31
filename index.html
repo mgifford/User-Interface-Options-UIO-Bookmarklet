@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIO+ Accessibility Bookmarklet</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><circle cx='24' cy='24' r='20' fill='%230066cc'/><text x='24' y='32' font-size='20' text-anchor='middle' fill='white'>+</text></svg>">
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --text-color: #222;
+            --bg-color: #fff;
+        }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: var(--text-color);
+            background: var(--bg-color);
+        }
+        header {
+            margin-bottom: 2rem;
+        }
+        .bookmarklet {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 1rem 0;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        .bookmarklet:hover {
+            background: #004999;
+        }
+        pre {
+            background: #f5f5f5;
+            padding: 1rem;
+            overflow-x: auto;
+            border-radius: 4px;
+            font-size: 0.9em;
+            white-space: pre-wrap;
+        }
+        code {
+            font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+        }
+        h2 {
+            margin-top: 2rem;
+            color: var(--text-color);
+        }
+        .installation {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .feature-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+            text-align: center;
+            color: var(--text-color);
+        }
+        .warning {
+            color: #856404;
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>UIO+ Accessibility Bookmarklet</h1>
+        <p>A simple browser bookmarklet to enhance web accessibility with customizable preferences that persist across pages.</p>
+    </header>
+
+    <main>
+        <div class="installation">
+            <h2>🚀 Installation</h2>
+            <p>Drag this link to your bookmarks bar:</p>
+            <a class="bookmarklet" href="javascript:(function(){if(window.uioPlus){window.uioPlus.toggle();return;}var s=document.createElement('script');s.src='bookmarklet.js';document.body.appendChild(s);})();">UIO+ Accessibility</a>
+        </div>
+
+        <section>
+            <h2>✨ Features</h2>
+            <ul class="feature-list">
+                <li><strong>High Contrast Mode</strong> - Improve text readability</li>
+                <li><strong>Adjustable Text Size</strong> - Make content larger or smaller</li>
+                <li><strong>Increased Line Spacing</strong> - Improve readability</li>
+                <li><strong>Page Simplification</strong> - Remove distracting elements</li>
+                <li><strong>Table of Contents</strong> - Easy page navigation</li>
+                <li><strong>Persistent Settings</strong> - Remember your preferences</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🔍 How to Use</h2>
+            <ol>
+                <li>Drag the "UIO+ Accessibility" link above to your bookmarks bar</li>
+                <li>Navigate to any webpage you want to make more accessible</li>
+                <li>Click the bookmarklet in your bookmarks bar to activate</li>
+                <li>Use the controls panel to adjust accessibility settings</li>
+                <li>Click "Minimize" to hide the panel (the icon will remain)</li>
+                <li>Your settings will be remembered as you browse</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>📋 Manual Installation</h2>
+            <p>If drag-and-drop doesn't work, you can manually create a bookmark:</p>
+            <ol>
+                <li>Right-click your bookmarks bar and select "Add Page" or "New Bookmark"</li>
+                <li>Enter "UIO+ Accessibility" as the name</li>
+                <li>Copy and paste this code as the URL:</li>
+            </ol>
+            <pre><code>javascript:(function(){if(window.uioPlus){window.uioPlus.toggle();return;}var s=document.createElement('script');s.src='bookmarklet.js';document.body.appendChild(s);})();</code></pre>
+        </section>
+
+        <section>
+            <h2>⚠️ Limitations</h2>
+            <ul class="warning">
+                <li>Some websites may block bookmarklets for security reasons</li>
+                <li>Complex web applications might require additional configuration</li>
+                <li>Style changes are temporary and will reset on page refresh</li>
+                <li>Table of Contents requires proper HTML5 semantic structure</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created for improved web accessibility. Try it on the <a href="forms.html">Forms Demo page</a>.</p>
+    </footer>
+
+    <script>
+        // Test if the bookmarklet works on the current page
+        document.querySelector('.bookmarklet').onclick = function(e) {
+            e.preventDefault();
+            if(window.uioPlus) {
+                window.uioPlus.toggle();
+                return;
+            }
+            var script = document.createElement('script');
+            script.src = 'bookmarklet.js';
+            document.body.appendChild(script);
+        };
+    </script>
+</body>
+</html>

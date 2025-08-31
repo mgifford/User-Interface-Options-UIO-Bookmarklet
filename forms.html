@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIO+ Accessibility Demo - Forms</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><circle cx='24' cy='24' r='20' fill='%230066cc'/><text x='24' y='32' font-size='20' text-anchor='middle' fill='white'>+</text></svg>'>
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --text-color: #222;
+            --bg-color: #fff;
+            --section-bg: #f5f5f5;
+        }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--text-color);
+            background: var(--bg-color);
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        header {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        nav {
+            background: #004999;
+            padding: 1rem 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        .demo-section {
+            background: var(--section-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            font-size: 1.2em;
+            padding: 0.75em;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background: var(--primary-color);
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #004999;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>UIO+ Accessibility Demo - Forms</h1>
+            <p>Try different form layouts and accessibility features</p>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="forms.html">Forms Demo</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container">
+        <section class="demo-section">
+            <h2>Simple Contact Form</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Your message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+        <section class="demo-section">
+            <h2>Survey</h2>
+            <form>
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="1" max="120">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender">
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <label for="feedback">Feedback</label>
+                <textarea id="feedback" name="feedback" rows="3"></textarea>
+                <button type="submit">Submit Survey</button>
+            </form>
+        </section>
+        <section class="demo-section">
+            <h2>Login Form</h2>
+            <form>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
+    <footer class="demo-section">
+        <div class="container">
+            <p>Created for UIO+ Accessibility Demo. <a href="index.html">Back to Home</a></p>
+        </div>
+    </footer>
+</body>
+</html>
