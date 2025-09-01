@@ -81,7 +81,7 @@ The following features are planned for future implementation:
    - Enhanced keyboard navigation patterns
   
 6. Memory
-   - Local storage or cache for page viewing
+   - [Local storage](https://github.com/ryersondmp/sa11y/blob/master/src/js/utils/utils.js#L274-L308) or cache for page viewing
    - Ability to store site specific preferences in cookies
   
 7. Testing
